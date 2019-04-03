@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+    <style>
+
+        #form
+        {
+            display:none;
+        }
+        #form input{
+            width:10vw;
+                position:relative;
+                height:4vh;
+                border-radius:25px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.3);
+                border:none;
+                outline:none;
+                padding:15px;
+                display:block;
+                margin:10vh 0vw 0vw 5vw;
+                text-align:center;
+
+        }
+        @import url('https://fonts.googleapis.com/css?family=Dosis');
+        
+    </style>
+    <script>
+   
+</script>
+</head>
+<body>
+
+    <h2 style="color:dodgerblue;font-size:1.5em;text-align:center;">MOBILE CONTACT APPLICATION</h2>
+
+
+    <button id="add" style="width:100px;cursor:pointer;height:40px;color:white;border-radius:20px;border:none;outline:none;background: linear-gradient(to right, #6666ff 0%, #ff00ff 100%);">Add</button>
+
+    <form name="contact" id="form" method="POST">
+
+        <table>
+            <tr>
+                <td>
+        <input type="text"placeholder="Enter Name" name="name" id="name">
+                </td>
+            </tr>
+
+        <tr>
+            <td>
+<input type="text"placeholder="Enter Phone" name="phone"id="phone">
+</td>
+        </tr>
+        </table>
+   
+
+    <p>Contact To Be Added</p>
+    <p>Name: <span id="demo"></span></p>
+    <p>Phone:<span id="demo1"></span></p>
+
+    <input type="submit" id="btn" value="Add"style="width:100px;cursor:pointer;height:40px;color:white;border-radius:20px;border:none;outline:none;background: linear-gradient(to right, #6666ff 0%, #ff00ff 100%);">
+            
+    </form>
+    <table id="contact" style="width:50%;"> 
+
+
+        </table>
+
+    
+
+    <script>
+var obj=[];
+
+document.getElementById("btn").addEventListener("click",function()
+{
+    
+    var obj1={};
+    obj1["name"]=document.getElementById["name"].value;
+    obj1["phone"]=document.getElementById["phone"].value;
+    obj.push(obj1);
+});
+document.getElementById("add").addEventListener("click",function()
+         {
+    document.getElementById("form").style.display="block";
+    });
+
+
+
+    document.getElementById("name").addEventListener("keydown",function()
+    {
+   document.getElementById("demo").innerText=document.getElementById("name").value;
+    });
+
+    document.getElementById("phone").addEventListener("keydown",function()
+    {
+   document.getElementById("demo1").innerText=document.getElementById("phone").value;
+    });
+
+
+        
+</script>
+</body>
+</html>
