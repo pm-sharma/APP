@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+<head>
+   
+    <style>
+
+        #form
+        {
+            display:none;
+        }
+    </style>
+    <script>
+   
+</script>
+</head>
+<body>
+<form action="/download" method='GET' class="form">
+
+
+    <button id= "button" type="submit">hello</button>
+</form>
+
+
+   <script>
+       $('#button').click(function(){
+
+        fetch('https://localhost:3000', {
+        method: "get",
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+         
+        },
+        })
+        .then((response) => {
+          return response.json()
+          console.log("Hrllo")
+          //do something awesome that makes the world a better place
+        })
+        .then(data => console.log(data))
+   });
+  
+</script>
+</body>
+
+</html>
