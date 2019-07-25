@@ -22,6 +22,8 @@ app.get('/', (req,res) => {
     res.render('index.hbs');
 });
 
+app.get('/test', (r,s) => s.json({test : "This is test route"}))
+
 app.get('/download',(req,res)=>{
 
     fetchVideoInfo('N_dV7--eGFc', function (err, videoInfo) {
