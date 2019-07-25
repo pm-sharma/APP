@@ -30,9 +30,9 @@ app.get('/download',(req,res)=>{
         if (err) throw new Error(err);
         else
 {
-        let jsonData = JSON.stringify(videoInfo);
+        // let jsonData = JSON.stringify(videoInfo);
         // res.send(jsonData); 
-        console.log(jsonData);
+        res.json({ details : videoInfo})
         
 }
       });
