@@ -17,17 +17,17 @@
 </script>
 </head>
 <body>
-<form action="/download" method='GET' class="form">
+<!-- <form action="/download" method='GET' class="form"> -->
 
 
-    <button id= "button" type="submit">hello</button>
-</form>
+    <button id="button" type="submit">hello</button>
+<!-- </form> -->
 
 
    <script>
        $('#button').click(function(){
 
-        fetch('https://localhost:3000/download', {
+        fetch('http://apigive.herokuapp.com/download', {
         method: "get",
         headers: {
           'Accept': 'application/json',
@@ -39,7 +39,9 @@
           return response.json()
           //do something awesome that makes the world a better place
         })
-        .then(data => console.log(data))
+        .then(data =>{
+            console.log(data.details.description);
+        })
    });
   
 </script>
